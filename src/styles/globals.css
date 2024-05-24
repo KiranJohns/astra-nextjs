@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Maze&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Rubik+Maze&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Gemstones&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Rubik+Gemstones&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn+SC:wght@400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arbutus+Slab&family=Niconne&display=swap');
+
+/* $lightGreen: #b9e7e7; */
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -16,18 +30,483 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+body{
+  font-family:  'Open Sans', sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+
+.auth{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color:  teal;
+  height: 100vh;
+
+  h1{
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: .5rem;
+  }
+
+  form{
+      display: flex;
+      flex-direction: column;
+      background-color: #fff;
+      padding: 3rem;
+      border-radius: 8px;
+  }
+  
+  input{
+      padding: 10px;
+      border: none;
+      min-width: 12rem;
+      margin-bottom: .9rem;
+      border-bottom: 1px solid gray;
+  }
+
+  button{
+     padding: 10px;
+     border:none;
+     background-color: teal;
+     color: #fff;
+     border-radius: .3rem;
+  }
+
+  .links{
+      text-decoration: none;
+  }
+
+ }
+
+
+
+
+
+
+.navbar{
+
+color: #fff;
+width: 100%;
+.container{
+  padding: 25px 0px;
+  
+
+
+  .link-flex{
+      display: flex;
+      justify-content: space-around;
+  }
+  
+@media screen and (max-width: 768px) {
+  .link-flex {
+     justify-content: space-between;
+  }
+  }
+}
+
+}
+
+.burgermenu{
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+@media screen and (max-width: 768px) {
+  .link-hidden {
+     display: none;
+  }
+}
+
+
+.home-page{
+  display: flex;
+  justify-content: center;
+  .job-card{
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 1rem;
+   padding: 1rem 1rem 2rem;
+   max-width: 15rem;
+  }
+  img{
+      width: 15rem;
+
+  }
+}
+
+
+
+/* Reseting */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+
+
+
+.container {
+margin-top: 80px;
+
+}
+
+
+
+.card {
+width: 280px;
+height: 475px;
+transform-style: preserve-3d;
+perspective: 500px;
+border: none;
+
+}
+
+.card .face {
+position: absolute;
+color: #212a50;
+text-shadow: 0.5px 0.5px rgb(45, 106, 61);
+width: 100%;
+height: 100%;
+overflow: hidden;
+box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+border-radius: 25px;
+background-color: #fff;
+background-size:cover;
+background-repeat: no-repeat;
+background-position: center;
+transform-style: preserve-3d;
+transition: 0.5s;
+backface-visibility: hidden;
+border-bottom: 3px solid #0891B2;
+
+border-right: 5px solid #0891B2;
+/* border-right: 1px solid #999;
+border-bottom: 1px solid #999; */
+}
+
+.card .face.front-face,
+.card .face.back-face {
+position: absolute;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+background-color:00dff4;
+}
+
+.card .face.front-face .profile {
+width: 150px;
+height: 150px;
+border-radius: 50%;
+object-fit: cover;
+}
+
+.card .face.front-face .name {
+
+font-family: "EB Garamond", serif;
+font-size: 2rem;
+font-weight: bold;
+color: #22c9e6;
+}
+
+.card .face.front-face .designation {
+font-family: "EB Garamond", serif;
+font-size: 1.25rem;
+font-weight: bold;
+color: #000;
+letter-spacing: 0.8px;
+}
+
+.card:hover .face.front-face {
+transform: rotateY(180deg);
+}
+
+.card .face.back-face {
+position: absolute;
+background: inherit;
+background: #fff;
+
+transform: rotateY(180deg);
+color: #04009A;
+text-shadow: 1px 1px rgb(142, 196, 98);
+padding: 20px 30px;
+text-align: center;
+user-select: none;
+}
+
+.card .face.back-face .fa-quote-left {
+position: absolute;
+top: 25px;
+left: 25px;
+font-size: 1.2rem;
+}
+
+.card .face.back-face .fa-quote-right {
+position: absolute;
+bottom: 35px;
+right: 25px;
+font-size: 1.2rem;
+}
+
+.card:hover .face.back-face {
+transform: rotateY(360deg);
+}
+
+@media(max-width: 991.5px) {
+.col-lg-4 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+}
+
+#myVideo {
+position: fixed;
+right: 0;
+bottom: 0;
+min-width: 100%; 
+min-height: 100%;
+}
+
+.testimonial{
+font-family: "Arbutus Slab", serif;
+font-weight: 400;
+font-style: normal;
+font-size: 1rem;
+letter-spacing: .8px;
+color: #334155;
+text-shadow: .5px .5px rgb(45, 106, 61);
+}
+
+.apply-button{
+background:#000;
+color: #fff;
+padding:.3rem .7rem;
+border-radius:.6rem;
+margin-top:1rem;
+border:0px;
+transform: translate(0px -10rem);
+font-family: "Rye", serif;
+font-weight: 300;
+font-style: normal;
+}
+
+.apply-button:hover{
+background:#fff;
+color: #06b6d4;
+
+}
+
+.apply-fixed{
+position: fixed;
+bottom: 0;
+margin-bottom: 1rem;
+}
+
+.landingfont{
+font-family: "Rye", serif;
+font-weight: 300;
+font-style: normal;
+text-shadow: 6px 6px #0891B2;
+}
+
+@media only screen and (max-width: 700px) {
+.landingfont{
+  text-shadow: 4px 4px #0891B2;
+}
+
+}
+
+
+.calistoga-regular {
+
+font-family: "Rye", serif;
+font-weight: 400;
+font-style: normal;
+letter-spacing: 1.5px;
+
+}
+
+.input-width{
+width: 80rem;
+}
+
+
+@media only screen and (max-width: 1250px) {
+.input-width{
+  width: 66rem;
+}
+}
+
+
+@media only screen and (max-width: 1050px) {
+.input-width{
+  width: 50rem;
+}
+}
+
+
+@media only screen and (max-width: 860px) {
+.input-width{
+  width: 35rem;
+}
+}
+
+@media only screen and (max-width: 612px) {
+.input-width{
+  width: 22.5rem;
+}
+
+}
+
+@media only screen and (max-width: 400px) {
+.input-width{
+  width: 19rem;
+}
+}
+
+.careers-color{
+color: #00ffff;
+}
+
+.astra-landing-fs{
+font-size: 5rem;
+}
+
+
+
+@media only screen and (max-width: 900px) {
+.astra-landing-fs{
+  font-size: 4rem;
+}
+}
+
+
+@media only screen and (max-width: 700px) {
+.astra-landing-fs{
+  font-size: 2.8rem;
+}
+
+}
+
+.prevent-select {
+-webkit-user-select: none; /* Safari */
+-ms-user-select: none; /* IE 10 and IE 11 */
+user-select: none; /* Standard syntax */
+}
+
+.pheonix-logo{
+width: 12.5rem;
+}
+
+
+@media only screen and (max-width: 700px) {
+.pheonix-logo{
+  width: 11.5rem;
+}
+
+}
+
+
+.login-page{
+ width: 100vw;
+ height: 100vh;
+}
+
+.svg-frame {
+position: relative;
+width: 300px;
+height: 300px;
+transform-style: preserve-3d;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.svg-frame svg {
+position: absolute;
+transition: .5s;
+z-index: calc(1 - (0.2 * var(--j)));
+transform-origin: center;
+width: 344px;
+height: 344px;
+fill: none;
+}
+
+.svg-frame:hover svg {
+transform: rotate(-80deg) skew(30deg) translateX(calc(45px * var(--i))) translateY(calc(-35px * var(--i)));
+}
+
+.svg-frame svg #center {
+transition: .5s;
+transform-origin: center;
+}
+
+.svg-frame:hover svg #center {
+transform: rotate(-30deg) translateX(45px) translateY(-3px);
+}
+
+#out2 {
+animation: rotate16 7s ease-in-out infinite alternate;
+transform-origin: center;
+}
+
+#out3 {
+animation: rotate16 3s ease-in-out infinite alternate;
+transform-origin: center;
+stroke: #ff0;
+}
+
+#inner3,
+#inner1 {
+animation: rotate16 4s ease-in-out infinite alternate;
+transform-origin: center;
+}
+
+#center1 {
+fill: #ff0;
+animation: rotate16 2s ease-in-out infinite alternate;
+transform-origin: center;
+}
+
+@keyframes rotate16 {
+to {
+transform: rotate(360deg);
+}
+}
+
+.custom-list {
+list-style-position: inside; /* Ensures bullets are inside the list container */
+padding-left: 0; /* Removes default padding */
+margin-left: 0; /* Removes default margin */
+}
+
+.custom-list li {
+text-indent: -1em; /* Pulls first line of each item back */
+padding-left: 1em; /* Adds space where bullets used to be */
+margin-bottom: 0.5em; /* Optional: Adds space between list items */
+}
+
+.custom-list li::marker {
+padding-right: 0.5em; /* Adjusts space after the bullet */
+}
+
+.custom-list li::before {
+content: ''; /* Allows customization before each line */
+display: inline-block; /* Needed to apply width */
+width: 2em; /* Adds indentation for overflow lines */
+margin-left: -2em; /* Pulls content back to align with the bullet */
 }
