@@ -217,14 +217,14 @@ object-fit: cover;
 
 .card .face.front-face .name {
 
-font-family: "EB Garamond", serif;
+/* font-family: "EB Garamond", serif; */
 font-size: 2rem;
 font-weight: bold;
 color: #22c9e6;
 }
 
 .card .face.front-face .designation {
-font-family: "EB Garamond", serif;
+/* font-family: "EB Garamond", serif; */
 font-size: 1.25rem;
 font-weight: bold;
 color: #000;
@@ -299,9 +299,10 @@ border-radius:.6rem;
 margin-top:1rem;
 border:0px;
 transform: translate(0px -10rem);
-font-family: "Rye", serif;
-font-weight: 300;
-font-style: normal;
+font-size: 1rem;
+/* font-family: "Rye", serif; */
+/* font-weight: 400;
+font-style: normal; */
 }
 
 .apply-button:hover{
@@ -428,8 +429,7 @@ width: 12.5rem;
 
 .svg-frame {
 position: relative;
-width: 300px;
-height: 300px;
+
 transform-style: preserve-3d;
 display: flex;
 justify-content: center;

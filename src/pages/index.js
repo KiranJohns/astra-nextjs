@@ -5,6 +5,13 @@ import Cookies from "js-cookie";
 import { useEffect, useState } from "react";
 import Loading from '../components/Loading';
 import Image from 'next/image'
+import {Rye} from '@next/font/google'
+
+const rye = Rye({
+  subsets: ['latin'],
+  weight: [ '400']
+})
+
 
 const Landing = () => {
   
@@ -25,7 +32,7 @@ const Landing = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 3000);
+    }, 2500);
   }, [])
   
 
@@ -53,11 +60,12 @@ const Landing = () => {
     <div style={{position:"relative",display:"flex", justifyContent:"center", marginTop:"2.3rem"}}>
       <div style={{ position:"absolute"}}>
         
-    <img className="pheonix-logo"  src={logo1} alt="" />
+    <Image className="pheonix-logo"  src='/logo5.png'   width={500}
+        height={500} alt="" />
     </div>
 
   <div >
-    <h1  className="astra-landing-fs prevent-select font-bold text-center text-white relative z-20 landingfont mt-48 ">
+    <h1  className={`astra-landing-fs prevent-select font-bold text-center text-white relative z-20 landingfont mt-48 ${rye.className}`}>
     {/* sm:text-9xl md:text-7xl text-3xl lg:text-9xl */}
       Astra Nova
     </h1>
@@ -81,7 +89,7 @@ const Landing = () => {
         className="absolute  transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt">
     </div>
     <a href="/vacancies" title="Get quote now"
-        className="relative inline-flex items-center w-48 justify-center px-8 py-4 text-2xl font-bold careers-color transition-all duration-200 bg-white calistoga-regular rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+        className={`relative inline-flex items-center w-48 justify-center px-8 py-4 text-2xl font-bold careers-color transition-all duration-200 bg-white calistoga-regular rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 ${rye.className}`}
         role="button">CAREERS
     </a>
 </div>

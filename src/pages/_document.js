@@ -1,4 +1,4 @@
-import { Html, Head, Main, NextScript } from "next/document";
+import { Html, Head, Main, NextScript, Metadata } from "next/document";
 
 export default function Document() {
   return (
@@ -7,7 +7,7 @@ export default function Document() {
       <link rel="icon" href="/logo5.png" sizes="any" />
       <title>Astra Nova</title>
         </Head>
-      <body>
+      <body className={'${rye}'}>
        
         <Main />
         <NextScript />
