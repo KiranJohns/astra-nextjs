@@ -6,7 +6,7 @@ const index = () => {
     const navigate=useRouter()
 
     const goto=()=>{
-    navigate.push('/NewPost')
+    navigate.push('/newpost')
     }
   
     function check(){
