@@ -28,7 +28,7 @@ export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
         position:"fixed"
       }}
       className={cn(
-        "absolute left-1/4 p-4 -top-1/4 flex  -translate-x-1/2 -translate-y-1/2 w-full h-full z-0 ",
+        " left-1/4 p-4 -top-1/4 flex  -translate-x-1/2 -translate-y-1/2 w-full h-full z-0 ",
         className
       )}
       {...rest}

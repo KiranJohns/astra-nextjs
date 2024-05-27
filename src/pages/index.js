@@ -40,6 +40,7 @@ const Landing = () => {
     <div >
       
       {isLoading ? (
+        
        <Loading />
         
       ) : (
